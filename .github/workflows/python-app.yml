@@ -39,6 +39,9 @@ jobs:
         tags: >
           { "env": "test" }
 
+    - name: Esperar antes de actualizar el servicio
+      run: sleep 180  # Espera 3 minutos
+
     - name: App Runner URL
       run: echo "App runner URL ${{ steps.deploy-apprunner.outputs.service-url }}"
 
